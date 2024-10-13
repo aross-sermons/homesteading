@@ -25,7 +25,7 @@
 - lat                        : DECIMAL(9, 6)               - For map plotting  
 - lon                        : DECIMAL(9, 6)               - For map plotting  
 - notes                      : VARCHAR(250)                - Notes on the location  
-### Location Connections
+### Location Location  
 **Purpose** - Link locations with each other.  
 - Meant to connect resources to land plots.  
 **Attributes**  
@@ -43,7 +43,8 @@
 - acreage                    : SMALLINT                   - The acreage of the listing  
 - price_per_acre             : DECIMAL(6, 2) NULL         - Nullable because this value is calculated from price and acreage  
 - listing_date               : DATE                       - The date the listing was created  
-- water_access               : VARHCAR(25)                - The type of water access (well, municipal, none)  
+- days_on_market              : INT                         - Number of days this property has been on the market  
+- water_access               : VARHCAR(25) NULL           - The type of water access (well, municipal, none)  
 - well_count                 : TINYINT                    - The number of wells on the property  
 - well_installable           : BOOLEAN                    - Whether or not drilling of new wells is allowed  
 - water_features             : VARCHAR(50)                - Short description of property water features  
@@ -53,3 +54,14 @@
 - land_use_resrtictions      : VARCHAR(250)               - (conservation, zoning ordinances)  
 - septic_system              : BOOLEAN                    - Whether there is a septic tank on the property  
 - septice_notes              : VARCHAR(50) NULL           - Condition and notes on septice tank, if applicable  
+- electric_access            : VARCHAR(25) NULL           - The type of electrical access
+- road_access                : VARCHAR(25)                - The type of road access
+- structures                 : VARCHAR(250)               - The type and number of structures  
+### Electric Provider
+**Purpose** - Describe available electricity providers  
+**Attributes**  
+- provider_id
+- 
+### Electric Location
+**Purpose** - Link electricity providers to locations in a many to many relationship.  
+*Attributes**
